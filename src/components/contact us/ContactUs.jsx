@@ -1,9 +1,21 @@
 import React from "react";
+import { useState, useEffect } from 'react';
 import contactBg from "../../assets/contactus/contact-bg.png";
 import ContactForm from "./ContactForm";
 import ContactCard from "./ContactCard";
 
 const ContactUs = () => {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash === "#contact") {
+      const el = document.getElementById("contact");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, []);
   return (
     <div>
       <section

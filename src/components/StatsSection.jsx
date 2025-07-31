@@ -48,7 +48,7 @@ const stats = [
 const StatsSection = () => {
   return (
     <section className="relative bg-[#f0dcf4] py-12 px-6 sm:px-10 overflow-hidden">
-      {/* 🌸 Background Flower on left only */}
+      {/*  Background Flower on left only */}
       <img
         src={flower}
         alt="Flower Background"
@@ -57,7 +57,8 @@ const StatsSection = () => {
       />
 
       {/* Stat Circles Grid */}
-      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 gap-x-6 gap-y-8 sm:gap-x-10 sm:gap-y-12 md:gap-16">
+      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 sm:gap-x-10 sm:gap-y-12 md:gap-16">
+
         {stats.map((item, index) => (
           <div
             key={index}
@@ -69,16 +70,18 @@ const StatsSection = () => {
             <img
               src={item.img}
               alt={item.label}
-              className="w-12 h-12 sm:w-16 sm:h-16 mb-2 sm:mb-4 object-contain"
+              className="w-12 h-12 sm:w-16 sm:h-16 mb-2 sm:mb-4 object-cover"
             />
-            <div className={`text-lg sm:text-2xl text-white ${item.hoverText}`}>
-              {item.value}
-            </div>
-            <div
-              className={`text-xs sm:text-base mt-1 text-white ${item.hoverText}`}
-            >
-              {item.label}
-            </div>
+            <div className="w-full px-1 text-center">
+  <div className={`text-sm sm:text-base md:text-xl text-white break-words ${item.hoverText}`}>
+    {item.value}
+  </div>
+  <div className={`text-[9px] sm:text-xs md:text-sm mt-1 text-white break-words ${item.hoverText}`}>
+    {item.label}
+  </div>
+</div>
+
+
           </div>
         ))}
       </div>

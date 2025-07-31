@@ -24,6 +24,7 @@ const WeddingBannerSection = () => {
         </h2>
 
         <button
+          onClick={() => window.location.href = "/contactus#contact"}
           className="mt-8 z-10 bg-[#5e4760]/80 text-[#fceeea] px-6 sm:px-8 py-3 rounded-full text-lg sm:text-xl shadow-lg hover:bg-[#4c1d39] transition-all duration-300"
           style={{
             fontFamily: "'Alex Brush', cursive",

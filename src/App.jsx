@@ -21,7 +21,19 @@ import Gallery from "./components/gallery/Gallery";
 import ContactUs from "./components/contact us/ContactUs";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermAndConditions from "./components/TermAndConditions";
-import Wedding from "./components/services/wedding/Wedding"; // ✅ FIXED
+import Wedding from "./components/services/wedding/Wedding";
+import Baby from "./components/services/baby/baby";
+import Birthday from "./components/services/birthday/birthday";
+import Catering from "./components/services/catering/catering";
+import College from "./components/services/college/college";
+import Corporate from "./components/services/corporate/corporate";
+import Engagement from "./components/services/engagement/engagement";
+import Entry from "./components/services/entry/entry";
+import Government from "./components/services/government/government";
+import School from "./components/services/school/school";
+import Stage from "./components/services/stage/stage";
+import Themes from "./components/services/themes/themes";
+import ScrollToTop from "./components/ScrollToTop";
 
 const HomePage = () => (
   <>
@@ -38,6 +50,7 @@ const HomePage = () => (
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -46,6 +59,50 @@ const App = () => {
         <Route
           path="/services/wedding/wedding-decoration"
           element={<Wedding />}
+        />
+        <Route
+          path="/services/baby/baby-shower"
+          element={<Baby />}
+        />
+        <Route
+          path="/services/birthday/birthday-decoration"
+          element={<Birthday />}
+        />
+        <Route
+          path="/services/catering/catering-services"
+          element={<Catering />}
+        />
+        <Route
+          path="/services/college/college-festival"
+          element={<College />}
+        />
+        <Route
+          path="/services/corporate/corporate-events"
+          element={<Corporate />}
+        />
+        <Route
+          path="/services/engagement/engagement-decoration"
+          element={<Engagement />}
+        />
+        <Route
+          path="/services/entry/bride-groom-entry"
+          element={<Entry/>}
+        />
+        <Route
+          path="/services/government/government-function"
+          element={<Government />}
+        />
+        <Route
+          path="/services/school/annual-function"
+          element={<School />}
+        />
+        <Route
+          path="/services/stage/stage-decoration"
+          element={<Stage />}
+        />
+        <Route
+          path="/services/themes/theme-based-events"
+          element={<Themes />}
         />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contactus" element={<ContactUs />} />

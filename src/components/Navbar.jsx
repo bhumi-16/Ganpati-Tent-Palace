@@ -41,7 +41,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-[#f6efe5] shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         {/* Left links (desktop) */}
-        <ul className="hidden lg:flex gap-6 items-center text-base font-bold text-royal relative">
+        <ul className="hidden lg:flex gap-6 items-center text-2xl font-bold text-royal relative tracking-wider">
           {links.slice(0, 3).map((link) => (
             <li
               key={link.name}
@@ -76,12 +76,12 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Ganpati Tent Palace"
-            className="h-20 w-auto object-contain"
+            className="h-24 w-auto object-contain"
           />
         </Link>
 
         {/* Right links (desktop) */}
-        <ul className="hidden lg:flex gap-6 items-center text-base font-bold text-royal">
+        <ul className="hidden lg:flex gap-6 items-center text-2xl font-bold text-royal tracking-wider">
           {links.slice(3).map((link) => (
             <li key={link.name} className="cursor-pointer hover:opacity-80">
               <Link to={link.path}>{link.name}</Link>

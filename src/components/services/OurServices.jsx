@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // ✅ Step 1: Import Link
+import { Link } from "react-router-dom";
 import serviceImg from "../../assets/services/serviceImg.png";
 import floralTop from "../../assets/AboutFlower.png";
 import floralBottom from "../../assets/AboutFlower.png";
 
+// Services mapped with categories
 const services = [
-  "Wedding Decoration",
-  "Engagement Decoration",
-  "Birthday Decoration",
-  "Theme-based Events",
-  "Bride Groom Entry",
-  "Corporate Events",
-  "Stage Decoration",
-  "College Festival",
-  "Catering Services",
-  "Baby Shower",
-  "Government Function",
-  "Annual Function",
+  { title: "Wedding Decoration", category: "wedding" },
+  { title: "Engagement Decoration", category: "engagement" },
+  { title: "Birthday Decoration", category: "birthday" },
+  { title: "Theme-based Events", category: "themes" },
+  { title: "Bride Groom Entry", category: "entry" },
+  { title: "Corporate Events", category: "corporate" },
+  { title: "Stage Decoration", category: "stage" },
+  { title: "College Festival", category: "college" },
+  { title: "Catering Services", category: "catering" },
+  { title: "Baby Shower", category: "baby" },
+  { title: "Government Function", category: "government" },
+  { title: "Annual Function", category: "school" },
 ];
 
 const OurServices = () => {
@@ -64,15 +65,16 @@ const OurServices = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-          {visibleServices.map((title, i) => {
+          {visibleServices.map((service, i) => {
             const rowIndex = Math.floor(i / 3);
             const bgColor = rowIndex <= 1 ? "#f0dcf4" : "#e6d2d9";
 
-            // ✅ Step 2: Generate URL path from title
-            const path = `/services/wedding/${title
+            const slug = service.title
               .toLowerCase()
               .replace(/\s+/g, "-")
-              .replace(/[^a-z0-9\-]/g, "")}`;
+              .replace(/[^a-z0-9\-]/g, "");
+
+            const path = `/services/${service.category}/${slug}`;
 
             return (
               <Link to={path} key={i}>
@@ -83,7 +85,7 @@ const OurServices = () => {
                   <div className="overflow-hidden">
                     <img
                       src={serviceImg}
-                      alt={title}
+                      alt={service.title}
                       className="w-full h-36 sm:h-44 md:h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
@@ -95,7 +97,7 @@ const OurServices = () => {
                         letterSpacing: "0.08em",
                       }}
                     >
-                      {title}
+                      {service.title}
                     </p>
                   </div>
                 </div>

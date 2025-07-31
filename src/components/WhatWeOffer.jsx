@@ -18,7 +18,7 @@ const cardVariants = {
   },
 };
 
-// ✅ Create a separate component for each card
+// Single Offer Card Component
 const OfferCard = ({ img, title, delay }) => {
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -28,7 +28,7 @@ const OfferCard = ({ img, title, delay }) => {
   return (
     <motion.div
       ref={ref}
-      className={`group relative w-[300px] h-[200px] overflow-hidden cursor-pointer rounded-md ${
+      className={`group relative w-full max-w-[300px] h-[200px] overflow-hidden cursor-pointer rounded-md ${
         delay === 1 ? "mt-4 md:mt-24" : ""
       }`}
       variants={cardVariants}
@@ -40,7 +40,7 @@ const OfferCard = ({ img, title, delay }) => {
         alt={title}
         className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-300"
       />
-      <p className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-[#4c1d39] px-2 group-hover:underline group-hover:text-[#fceeea] whitespace-pre-line">
+      <p className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-[#4c1d39] px-2 group-hover:underline group-hover:text-[#fceeea] whitespace-pre-line text-center">
         {title}
       </p>
     </motion.div>
@@ -55,18 +55,18 @@ const WhatWeOfferSection = () => {
   ];
 
   return (
-    <section className="relative bg-[#fceeea] py-16 px-4 overflow-hidden">
-      {/* 🌸 Left Floral Background */}
+    <section className="relative py-16 px-4 overflow-hidden bg-[#fceeea]">
+      {/* Decorative Flower Background */}
       <img
         src={flowerBg}
         alt="floral design"
-        className="absolute top-0 left-0 h-full w-[60%] sm:w-[50%] object-contain opacity-20 pointer-events-none ml-[-8%] max-w-none"
+        className="hidden min-[701px]:block absolute top-0 left-[-80px] w-[400px] md:w-[600px] lg:w-[750px] h-full opacity-30 rotate-[-5deg] pointer-events-none z-0"
         aria-hidden="true"
       />
 
-      {/* 💖 Heading */}
+      {/* Heading */}
       <h2
-        className="text-4xl sm:text-4xl md:text-5xl font-bold text-[#8b3e68] text-center mb-10"
+        className="text-4xl sm:text-4xl md:text-5xl font-bold text-[#8b3e68] text-center mb-10 relative z-10"
         style={{
           fontFamily: "'Alex Brush', cursive",
           letterSpacing: "0.08em",
@@ -75,8 +75,8 @@ const WhatWeOfferSection = () => {
         What We Offer….
       </h2>
 
-      {/* 🎬 Animated Cards */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 place-items-center text-center">
+      {/* Cards */}
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 place-items-center text-center">
         {cards.map((card, index) => (
           <OfferCard
             key={index}
@@ -87,8 +87,8 @@ const WhatWeOfferSection = () => {
         ))}
       </div>
 
-      {/* 📎 Bottom Text */}
-      <div className="text-right text-xl md:text-2xl mt-10 text-[#5a2a49] pr-6 md:pr-20 italic">
+      {/* Bottom Text */}
+      <div className="relative z-10 text-right text-xl md:text-2xl mt-10 text-[#5a2a49] pr-6 md:pr-20 italic">
         and many more….
       </div>
     </section>

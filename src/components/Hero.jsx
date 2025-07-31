@@ -41,7 +41,7 @@ const HeroCarousel = () => {
           />
           <div className="absolute inset-0 bg-[#5a2a49]/70 flex items-center justify-center">
             <h2
-              className={`font-bricolage text-[#e6d2d9] text-3xl md:text-5xl font-bold px-4 text-center transition-opacity duration-500 ${
+              className={`font-bricolage text-[#e6d2d9] text-3xl md:text-5xl font-bold px-4 text-center max-w-full break-words transition-opacity duration-500 ${
                 index === activeSlide ? "animate-fadeInUp" : "opacity-0"
               }`}
             >

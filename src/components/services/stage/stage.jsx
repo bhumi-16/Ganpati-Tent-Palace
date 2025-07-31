@@ -1,7 +1,7 @@
 import React from "react";
 import bgImage from "../../../assets/Wedding/wedding.jpeg";
-import WeddingGalleryGrid from "./WeddingGalleryGrid";
-import WeddingStyledParagraph from "./WeddingStyledParagraph";
+import WeddingGalleryGrid from "./stageGalleryGrid";
+import WeddingStyledParagraph from "./stageStyledParagraph";
 
 
 const Wedding = () => {

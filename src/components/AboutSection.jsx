@@ -4,11 +4,11 @@ import flower from "../assets/AboutFlower.png";
 const AboutSection = () => {
   return (
     <section className="relative bg-[#e4bfcd] py-16 px-4 overflow-hidden">
-      {/* Right floral image - fully aligned to screen edge */}
+      {/* Right floral image - large on big screens, hidden on small */}
       <img
         src={flower}
         alt=""
-        className="absolute right-0 bottom-0 h-[130%] max-h-none opacity-15 pointer-events-none"
+        className="absolute right-50px top-0  h-full hidden sm:block sm:h-[120%] lg:h-[150%] max-h-none opacity-15 pointer-events-none"
         style={{ right: 0 }}
         aria-hidden="true"
       />

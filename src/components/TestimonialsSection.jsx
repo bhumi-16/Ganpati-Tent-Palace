@@ -35,14 +35,14 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="bg-[#c8a6b3] text-[#5a2a49] py-20 px-6 text-center">
+    <section className="bg-[#c8a6b3] text-[#5a2a49] py-16 px-4 text-center overflow-hidden">
       <p className="text-xs tracking-widest mb-2">12K+ HAPPY CUSTOMERS</p>
-      <h2 className="text-3xl md:text-4xl font-bold mb-12">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 break-words">
         Users love Landingfolio
       </h2>
 
       {/* Testimonials Grid */}
-      <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto">
         {testimonials.map((testimonial, index) => {
           // Show only first 3 on small screens, all on md+
           const isHiddenOnMobile = index > 2 ? "hidden md:flex" : "flex";
@@ -50,16 +50,16 @@ const TestimonialsSection = () => {
           return (
             <div
               key={index}
-              className={`${isHiddenOnMobile} bg-[#e6d2d9] text-[#5a2a49] px-6 py-4 rounded-full items-center gap-4`}
+              className={`${isHiddenOnMobile} flex-col sm:flex-row bg-[#e6d2d9] text-[#5a2a49] px-4 py-4 rounded-full items-center gap-4 min-w-0 overflow-hidden mx-auto w-full sm:w-auto`}
             >
               <img
                 src={testimonial.img}
                 alt={testimonial.name}
                 className="w-10 h-10 rounded-full object-cover"
               />
-              <p className="text-sm text-left">
+              <p className="text-sm text-center sm:text-left break-words">
                 <span className="block">{testimonial.text}</span>
-                <span className="font-semibold">{testimonial.name}</span>
+                <span className="font-semibold block">{testimonial.name}</span>
               </p>
             </div>
           );

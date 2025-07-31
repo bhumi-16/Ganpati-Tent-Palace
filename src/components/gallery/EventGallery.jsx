@@ -1,51 +1,58 @@
-import React, { useState } from "react";
-import img1 from "../../assets/gallery/img1.jpg";
-import img2 from "../../assets/gallery/img2.jpg";
-import img3 from "../../assets/gallery/img3.jpg";
-import img4 from "../../assets/gallery/img4.jpg";
-import img5 from "../../assets/gallery/img5.jpg";
-import img6 from "../../assets/gallery/img6.jpg";
-import img7 from "../../assets/gallery/img7.jpg";
-import img8 from "../../assets/gallery/img8.jpg";
-import img9 from "../../assets/gallery/img9.png";
-import img10 from "../../assets/gallery/img10.jpg";
-import img11 from "../../assets/gallery/img11.jpg";
-import img12 from "../../assets/gallery/img12.jpg";
+import React, { useState, useEffect } from "react";
 
-const images = [
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-  img9,
-  img10,
-  img11,
-  img12,
-];
+// Webpack's dynamic import for images in one folder
+const imageContext = require.context("../../assets/gallery", false, /\.(jpg|jpeg|png)$/);
 
-const EventGallery = () => {
+const allImages = imageContext.keys().map((key) => ({
+  src: imageContext(key),
+  name: key.toLowerCase(), // For filtering
+}));
+
+const getImagesForCategory = (category) => {
+  // Remove extra words like "gallery", "events", "services", etc.
+  const formatted = category
+    .toLowerCase()
+    .replace(" gallery", "")
+    .replace(" events", "")
+    .replace(" services", "")
+    .replace(" based", "")
+    .trim();
+
+  return allImages
+    .filter((img) => img.name.includes(formatted))
+    .map((img) => img.src);
+};
+
+
+const getRandomImages = (count = 9) => {
+  const all = allImages.map((img) => img.src);
+  return all.sort(() => 0.5 - Math.random()).slice(0, count);
+};
+
+// ✅ Only this one definition of EventGallery
+const EventGallery = ({ selectedCategory }) => {
+  const [imagesToShow, setImagesToShow] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const openModal = (index) => {
-    setSelectedIndex(index);
-  };
+  useEffect(() => {
+    if (selectedCategory && selectedCategory !== "All") {
+      setImagesToShow(getImagesForCategory(selectedCategory));
+    } else {
+      setImagesToShow(getRandomImages());
+    }
+  }, [selectedCategory]);
 
-  const closeModal = () => {
-    setSelectedIndex(null);
-  };
+  const openModal = (index) => setSelectedIndex(index);
+  const closeModal = () => setSelectedIndex(null);
 
   const showPrev = (e) => {
     e.stopPropagation();
-    setSelectedIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setSelectedIndex((prev) => (prev === 0 ? imagesToShow.length - 1 : prev - 1));
   };
 
   const showNext = (e) => {
     e.stopPropagation();
-    setSelectedIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setSelectedIndex((prev) => (prev === imagesToShow.length - 1 ? 0 : prev + 1));
   };
 
   return (
@@ -58,7 +65,7 @@ const EventGallery = () => {
       </h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        {images.map((src, index) => (
+        {imagesToShow.map((src, index) => (
           <div
             key={index}
             onClick={() => openModal(index)}
@@ -76,7 +83,6 @@ const EventGallery = () => {
         ))}
       </div>
 
-      {/* Modal with left/right controls */}
       {selectedIndex !== null && (
         <div
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
@@ -89,7 +95,7 @@ const EventGallery = () => {
             ‹
           </button>
           <img
-            src={images[selectedIndex]}
+            src={imagesToShow[selectedIndex]}
             alt="enlarged"
             className="max-w-[90%] max-h-[90%] rounded-lg shadow-xl"
           />
