@@ -9,7 +9,10 @@ const links = [
     name: "Services",
     path: "/services",
     submenu: [
-      { name: "Wedding Decoration", path: "/services/wedding" },
+      {
+        name: "Wedding Decoration",
+        path: "/services/wedding/wedding-decoration",
+      },
       { name: "Corporate Events", path: "/services/corporate" },
       { name: "Birthday Parties", path: "/services/birthday" },
       { name: "Theme Based Events", path: "/services/theme" },

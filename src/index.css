@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 /* custom utilities */
+
 @layer utilities {
   .text-shadow-lg {
     text-shadow: 0 2px 4px rgb(0 0 0 / 0.35);
@@ -36,4 +37,15 @@
 
 .animate-wiggle {
   animation: wiggle 1.5s ease-in-out infinite;
+}
+
+.arrow-shape {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 30px) 0,
+    100% 50%,
+    calc(100% - 30px) 100%,
+    0 100%,
+    0 0
+  );
 }
