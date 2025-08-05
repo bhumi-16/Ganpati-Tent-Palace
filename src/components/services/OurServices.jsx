@@ -43,12 +43,14 @@ const OurServices = () => {
       <img
         src={floralTop}
         alt="Floral Background Top"
-        className="absolute top-0 left-0 w-1/2 opacity-20 pointer-events-none z-0"
+        className="hidden lg:block absolute top-0 left-0 w-auto max-w-[1500px] opacity-20 pointer-events-none z-0 scale-x-[-1]"
+
       />
       <img
         src={floralBottom}
         alt="Floral Background Bottom"
-        className="absolute bottom-0 right-0 w-1/2 opacity-20 pointer-events-none z-0"
+        className="hidden lg:block absolute bottom-0 right-0 w-auto max-w-[1500px] opacity-20 pointer-events-none z-0"
+
       />
 
       <div className="relative z-10 max-w-6xl mx-auto">

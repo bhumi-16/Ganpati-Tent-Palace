@@ -1,8 +1,8 @@
 import React from "react";
 import bgImage from "../../../assets/Wedding/wedding.jpeg";
-import engagementGalleryGrid from "./engagementGalleryGrid";
-import engagementStyledParagraph from "./engagementStyledParagraph";
-import engagementdetails from "./engagementdetails";
+import EngagementGalleryGrid from "./engagementGalleryGrid";
+import EngagementStyledParagraph from "./engagementStyledParagraph";
+import Engagementdetails from "./engagementdetails";
 
 const engagement = () => {
   return (
@@ -29,13 +29,13 @@ const engagement = () => {
       </div>
 
       {/* Styled Paragraph */}
-      <engagementStyledParagraph />
+      <EngagementStyledParagraph />
 
       {/* Gallery Grid */}
-      <engagementGalleryGrid />
+      <EngagementGalleryGrid />
 
       {/* Engagement Details */}
-      <engagementdetails />
+      <Engagementdetails />
     </div>
   );
 };

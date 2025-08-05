@@ -13,10 +13,10 @@ const links = [
         name: "Wedding Decoration",
         path: "/services/wedding/wedding-decoration",
       },
-      { name: "Corporate Events", path: "/services/corporate" },
-      { name: "Birthday Parties", path: "/services/birthday" },
-      { name: "Theme Based Events", path: "/services/theme" },
-      { name: "Bride-Groom Entry", path: "/services/entry" },
+      { name: "Corporate Events", path: "/services/corporate/corporate-events" },
+      { name: "Birthday Parties", path: "/services/birthday/birthday-decoration" },
+      { name: "Theme Based Events", path: "/services/themes/theme-based-events" },
+      { name: "Bride-Groom Entry", path: "/services/entry/bride-groom-entry" },
     ],
   },
   { name: "Gallery", path: "/gallery" },
@@ -25,12 +25,18 @@ const links = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null); // for desktop dropdown
+  const [openDropdown, setOpenDropdown] = useState(null);
   const menuRef = useRef(null);
+  const dropdownRef = useRef(null);
+  const dropdownTimeout = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        (!dropdownRef.current || !dropdownRef.current.contains(event.target))
+      ) {
         setIsOpen(false);
         setOpenDropdown(null);
       }
@@ -39,6 +45,17 @@ const Navbar = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  const handleMouseEnter = (name) => {
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+    setOpenDropdown(name);
+  };
+
+  const handleMouseLeave = () => {
+    dropdownTimeout.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 200); // Delay to allow user to move cursor
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-[#f6efe5] shadow-sm">
@@ -49,27 +66,29 @@ const Navbar = () => {
             <li
               key={link.name}
               className="relative cursor-pointer hover:opacity-80"
+              onMouseEnter={() => link.submenu && handleMouseEnter(link.name)}
+              onMouseLeave={() => link.submenu && handleMouseLeave()}
             >
-              <div
-                onMouseEnter={() => link.submenu && setOpenDropdown(link.name)}
-                onMouseLeave={() => link.submenu && setOpenDropdown(null)}
-              >
-                <Link to={link.path}>{link.name}</Link>
+              <Link to={link.path}>{link.name}</Link>
 
-                {/* Dropdown Menu */}
-                {link.submenu && openDropdown === link.name && (
-                  <ul className="absolute left-0 top-full mt-2 w-56 bg-white text-sm text-black shadow-lg rounded-md z-50">
-                    {link.submenu.map((sublink) => (
-                      <li
-                        key={sublink.name}
-                        className="hover:bg-gray-100 px-4 py-2"
-                      >
-                        <Link to={sublink.path}>{sublink.name}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+              {/* Dropdown Menu */}
+              {link.submenu && openDropdown === link.name && (
+                <ul
+                  ref={dropdownRef}
+                  className="absolute left-0 top-full mt-2 w-56 bg-white text-sm text-black shadow-lg rounded-md z-50"
+                  onMouseEnter={() => handleMouseEnter(link.name)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {link.submenu.map((sublink) => (
+                    <li
+                      key={sublink.name}
+                      className="hover:bg-gray-100 px-4 py-2"
+                    >
+                      <Link to={sublink.path}>{sublink.name}</Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>
@@ -93,13 +112,18 @@ const Navbar = () => {
         </ul>
 
         {/* Hamburger (mobile) */}
-        <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button className="lg:hidden" onClick={() => setIsOpen((prev) => !prev)}>
           <span className="sr-only">Toggle menu</span>
-          <div className="space-y-1">
-            <span className="block h-0.5 w-6 bg-royal"></span>
-            <span className="block h-0.5 w-6 bg-royal"></span>
-            <span className="block h-0.5 w-6 bg-royal"></span>
-          </div>
+          {isOpen ? (
+  <span className="text-4xl font-bold text-royal leading-none">&times;</span>
+) : (
+  <div className="space-y-1">
+    <span className="block h-0.5 w-6 bg-royal"></span>
+    <span className="block h-0.5 w-6 bg-royal"></span>
+    <span className="block h-0.5 w-6 bg-royal"></span>
+  </div>
+)}
+
         </button>
       </nav>
 

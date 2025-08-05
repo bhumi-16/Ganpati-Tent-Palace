@@ -1,7 +1,7 @@
 import React from "react";
 import FlowerImage from "../../../assets/StatsBg.png";
 
-const Engagementdetails = () => {
+const BirthdayDetails = () => {
   return (
     <div className="bg-[#1A0023] flex items-center justify-center py-16 px-8">
       <div className="max-w-6xl w-full flex flex-col md:flex-row md:justify-between gap-8">
@@ -22,7 +22,7 @@ const Engagementdetails = () => {
           <img
             src={FlowerImage}
             alt="Floral decoration"
-            className="max-h-[400px] object-contain scale-x-[-1]"  
+            className="max-h-[400px] object-contain scale-x-[-1]"
             style={{
               filter: "brightness(2.2) contrast(2.2) saturate(2.5)",
             }}
@@ -39,4 +39,4 @@ const ArrowBox = ({ text }) => (
   </div>
 );
 
-export default Engagementdetails;
+export default BirthdayDetails;

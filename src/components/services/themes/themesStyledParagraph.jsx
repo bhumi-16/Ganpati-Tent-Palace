@@ -1,36 +1,42 @@
 import React from "react";
-import leftFloral from "../../../assets/StatsBg.png"; // Update with your image path
-import rightFloral from "../../../assets/StatsBg.png"; // Update with your image path
+import leftFloral from "../../../assets/StatsBg.png";
+import rightFloral from "../../../assets/StatsBg.png";
 
 const TextSection = () => {
   return (
-    <div className="bg-[#3f0d27] min-h-screen flex items-center justify-center font-[Patrick_Hand] relative overflow-hidden px-4">
+    <div className="bg-[#3f0d27] py-12 flex items-center justify-center font-[Patrick_Hand] relative overflow-hidden px-4">
       {/* Left Floral */}
       <img
         src={leftFloral}
         alt="Left Floral"
-        className="absolute top-50 left-0 w-50 sm:w-32 lg:w-80 hidden lg:block"
-         style={{
-    filter: "sepia(0.6) saturate(4) hue-rotate(10deg) brightness(0.9) contrast(0.75)",
-  }}
+        className="absolute top-50 left-0 w-20 sm:w-32 lg:w-80 hidden lg:block"
+        style={{
+          filter:
+            "sepia(0.6) saturate(4) hue-rotate(10deg) brightness(0.9) contrast(0.75)",
+        }}
       />
 
       {/* Right Floral */}
       <img
         src={rightFloral}
         alt="Right Floral"
-        className="absolute top-50 right-0 w-24 sm:w-32 lg:w-80 scale-x-[-1] hidden lg:block"
+        className="absolute top-50 right-0 w-20 sm:w-32 lg:w-80 scale-x-[-1] hidden lg:block"
         style={{
-    filter: "sepia(0.6) saturate(4) hue-rotate(10deg) brightness(0.9) contrast(0.75)",
-  }}
+          filter:
+            "sepia(0.6) saturate(4) hue-rotate(10deg) brightness(0.9) contrast(0.75)",
+        }}
       />
 
       {/* Text */}
-      <p className="text-[#fbd68f] text-center text-xl sm:text-2xl md:text-3xl leading-relaxed max-w-4xl font-semibold z-10">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+      <p className="text-[#e8d1a6] text-center text-xl sm:text-2xl md:text-3xl font-body leading-relaxed max-w-4xl font-semibold z-10">
+        At Ganpati Tent Palace, we specialize in creating elegant and
+        unforgettable wedding experiences. From royal mandap setups and floral
+        stage decorations to customized bride-groom entries and traditional
+        lighting, we handle every detail with care and creativity. Our team
+        brings your vision to life with beautiful tent designs, guest seating,
+        catering, and more. Whether it's a grand celebration or a simple
+        ceremony, we ensure everything runs smoothly and looks stunning. Make
+        your big day truly special with us by your side.
       </p>
     </div>
   );

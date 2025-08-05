@@ -52,21 +52,28 @@ const OurStory = () => {
           </div>
         </div>
 
-        {/* Image Section */}
-        <div className="relative w-full sm:w-1/2 flex justify-center">
-          <div className="relative w-[160px] sm:w-[220px] md:w-[260px] lg:w-[300px] aspect-[3/4]">
-            <img
-              src={img1}
-              alt="Our Story Background"
-              className="w-full h-full object-cover rounded-xl shadow-lg ml-6 sm:ml-10"
-            />
-            <img
-              src={img2}
-              alt="Our Story Foreground"
-              className="w-full h-full object-cover rounded-xl shadow-2xl absolute top-5 left-5 sm:top-6 sm:left-6"
-            />
-          </div>
-        </div>
+       {/* Image Section */}
+<div className="relative w-full sm:w-1/2 flex justify-center">
+  <div className="relative w-[160px] sm:w-[220px] md:w-[260px] lg:w-[300px] aspect-[3/4]">
+    {/* Background Image */}
+    <img
+      src={img2}
+      alt="Our Story Background"
+      className="w-full h-full object-cover rounded-xl shadow-lg"
+    />
+
+    {/* Foreground Image - moderate shift */}
+    <img
+      src={img1}
+      alt="Our Story Foreground"
+       className="w-full object-cover rounded-xl shadow-2xl absolute top-10 left-10 sm:top-24 sm:left-36 max-w-[90%]"
+  style={{ height: "90%" }}
+    />
+  </div>
+</div>
+
+
+
       </div>
     </section>
   );

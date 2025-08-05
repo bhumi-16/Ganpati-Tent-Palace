@@ -1,27 +1,88 @@
-import React from "react";
-import eventImg from "../../../assets/gallery2.jpeg"; // Replace with actual image
+import React, { useState } from "react";
+import img1 from "../../../assets/Wedding/wedding1.png";
+import img2 from "../../../assets/Wedding/wedding2.png";
+import img3 from "../../../assets/Wedding/wedding3.png";
+import img4 from "../../../assets/Wedding/wedding4.png";
+import img5 from "../../../assets/Wedding/wedding5.png";
+import img6 from "../../../assets/Wedding/wedding6.png";
+import img7 from "../../../assets/Wedding/wedding7.png";
+import img8 from "../../../assets/Wedding/wedding8.png";
+import img9 from "../../../assets/Wedding/wedding9.png";
+import { X, ChevronLeft, ChevronRight } from "lucide-react"; // Optional: use any icon library
 
-const images = Array(9).fill(eventImg); // Create 9 copies
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
 const EventGallery = () => {
-  return (
-    <div className="relative bg-[#ede7e2] min-h-screen py-10 px-4">
-      {/* Background flower illustration */}
-      <div className="absolute inset-0 bg-[url('./assets/Wedding/wedding.jpeg')] bg-center bg-no-repeat bg-contain opacity-10 z-0"></div>
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
-      {/* Image grid */}
-      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {images.map((img, idx) => (
-          <div key={idx} className="overflow-hidden rounded-md shadow-md">
-            <img
-              src={img}
-              alt={`event-${idx}`}
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        ))}
+  const openModal = (index) => {
+    setSelectedIndex(index);
+  };
+
+  const closeModal = () => {
+    setSelectedIndex(null);
+  };
+
+  const showPrev = () => {
+    setSelectedIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : images.length - 1
+    );
+  };
+
+  const showNext = () => {
+    setSelectedIndex((prevIndex) =>
+      prevIndex < images.length - 1 ? prevIndex + 1 : 0
+    );
+  };
+
+  return (
+    <>
+      <div className="relative bg-[#ede7e2] py-10 px-4 mb-5 pb-5">
+        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
+          {images.map((img, idx) => (
+            <div
+              key={idx}
+              className={`overflow-hidden rounded-md shadow-md cursor-pointer transform transition-transform duration-300 hover:scale-105 ${
+                idx >= 8 ? "hidden sm:block" : ""
+              }`}
+              onClick={() => openModal(idx)}
+            >
+              <img
+                src={img}
+                alt={`event-${idx}`}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+
+      {/* Modal */}
+      {selectedIndex !== null && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center">
+          <button
+            onClick={closeModal}
+            className="absolute top-4 right-4 text-white"
+          >
+            <X size={32} />
+          </button>
+
+          <button onClick={showPrev} className="absolute left-4 text-white">
+            <ChevronLeft size={40} />
+          </button>
+
+          <img
+            src={images[selectedIndex]}
+            alt={`enlarged-${selectedIndex}`}
+            className="max-w-[90%] max-h-[80%] rounded-lg shadow-lg object-contain transition-all duration-300"
+          />
+
+          <button onClick={showNext} className="absolute right-4 text-white">
+            <ChevronRight size={40} />
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 

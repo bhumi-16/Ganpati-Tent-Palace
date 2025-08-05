@@ -1,7 +1,7 @@
 import React from "react";
 import FlowerImage from "../../../assets/StatsBg.png";
 
-const Engagementdetails = () => {
+const GovernmentDetails = () => {
   return (
     <div className="bg-[#1A0023] flex items-center justify-center py-16 px-8">
       <div className="max-w-6xl w-full flex flex-col md:flex-row md:justify-between gap-8">
@@ -39,4 +39,4 @@ const ArrowBox = ({ text }) => (
   </div>
 );
 
-export default Engagementdetails;
+export default GovernmentDetails;

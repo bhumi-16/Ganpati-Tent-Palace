@@ -1,7 +1,7 @@
 import React from "react";
 import FlowerImage from "../../../assets/StatsBg.png";
 
-const Engagementdetails = () => {
+const EntryDetails = () => {
   return (
     <div className="bg-[#1A0023] flex items-center justify-center py-16 px-8">
       <div className="max-w-6xl w-full flex flex-col md:flex-row md:justify-between gap-8">
@@ -10,7 +10,7 @@ const Engagementdetails = () => {
             What's in this for you!!!
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ArrowBox text="Price" />
             <ArrowBox text="Customization" />
             <ArrowBox text="Memorable Experience" />
@@ -39,4 +39,4 @@ const ArrowBox = ({ text }) => (
   </div>
 );
 
-export default Engagementdetails;
+export default EntryDetails;
