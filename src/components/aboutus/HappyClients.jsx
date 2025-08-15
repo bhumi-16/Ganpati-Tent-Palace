@@ -37,7 +37,7 @@ const HappyClients = () => {
               <FaStar key={i} className="text-[#846276] mr-1" />
             ))}
             <p className="ml-2 text-sm sm:text-base text-[#3e1831]">
-              <strong>4.8 out of 5 stars</strong> from 2.8k reviews
+              <strong>4.9 out of 5 stars</strong> from 9.8k reviews
             </p>
           </div>
         </div>
@@ -52,14 +52,14 @@ const HappyClients = () => {
             />
             <div className="absolute bottom-4 left-4 right-4 bg-[#e6d2d9]/90 backdrop-blur-md rounded-lg p-4 text-sm shadow-lg">
               <p className="italic text-[#5a2a49] mb-2">
-                “Simply the best. Better than all the rest. I’d recommend
-                Ganpati Tent Palace to everyone.”
+                “Celebrate the Present, Create the Moments — Live with
+                Awareness, Lead with Joy.”
               </p>
               <div>
-                <p className="font-semibold text-[#3e1831]">Leslie Alexander</p>
-                <p className="text-[#ac97ad] text-xs">
-                  Director of Celebrations, CreativeGIG
+                <p className="font-semibold text-[#3e1831]">
+                  Shri Shri Ravishankar’s
                 </p>
+                <p className="text-[#ac97ad] text-xs">A Humanitarian Leader</p>
               </div>
             </div>
           </div>

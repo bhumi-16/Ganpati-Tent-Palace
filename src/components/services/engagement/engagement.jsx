@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../../../assets/Wedding/wedding.jpeg";
+import bgImage from "../../../assets/Engagement/engagement.png";
 import EngagementGalleryGrid from "./engagementGalleryGrid";
 import EngagementStyledParagraph from "./engagementStyledParagraph";
 import Engagementdetails from "./engagementdetails";

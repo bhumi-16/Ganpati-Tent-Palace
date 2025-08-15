@@ -9,13 +9,13 @@ const achievements = [
   {
     image: ach1,
     date: "JAN 12, 2023",
-    title: "Successfully organized the grand cultural fest 2023",
+    title: "Grand Ramayan Event – A Historic Success",
     tag: "Events",
   },
   {
     image: ach2,
     date: "FEB 25, 2023",
-    title: "Featured in Rajasthan’s Top Event Planners",
+    title: "Bhagwat Katha – Gathering of Devotees Nationwide",
     tag: "Recognition",
   },
   {

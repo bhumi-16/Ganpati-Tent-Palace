@@ -13,9 +13,18 @@ const links = [
         name: "Wedding Decoration",
         path: "/services/wedding/wedding-decoration",
       },
-      { name: "Corporate Events", path: "/services/corporate/corporate-events" },
-      { name: "Birthday Parties", path: "/services/birthday/birthday-decoration" },
-      { name: "Theme Based Events", path: "/services/themes/theme-based-events" },
+      {
+        name: "Corporate Events",
+        path: "/services/corporate/corporate-events",
+      },
+      {
+        name: "Birthday Parties",
+        path: "/services/birthday/birthday-decoration",
+      },
+      {
+        name: "Theme Based Events",
+        path: "/services/themes/theme-based-events",
+      },
       { name: "Bride-Groom Entry", path: "/services/entry/bride-groom-entry" },
     ],
   },
@@ -112,18 +121,22 @@ const Navbar = () => {
         </ul>
 
         {/* Hamburger (mobile) */}
-        <button className="lg:hidden" onClick={() => setIsOpen((prev) => !prev)}>
+        <button
+          className="lg:hidden"
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
           <span className="sr-only">Toggle menu</span>
           {isOpen ? (
-  <span className="text-4xl font-bold text-royal leading-none">&times;</span>
-) : (
-  <div className="space-y-1">
-    <span className="block h-0.5 w-6 bg-royal"></span>
-    <span className="block h-0.5 w-6 bg-royal"></span>
-    <span className="block h-0.5 w-6 bg-royal"></span>
-  </div>
-)}
-
+            <span className="text-4xl font-bold text-royal leading-none">
+              &times;
+            </span>
+          ) : (
+            <div className="space-y-1">
+              <span className="block h-0.5 w-6 bg-royal"></span>
+              <span className="block h-0.5 w-6 bg-royal"></span>
+              <span className="block h-0.5 w-6 bg-royal"></span>
+            </div>
+          )}
         </button>
       </nav>
 

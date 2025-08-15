@@ -10,20 +10,20 @@ import {
 
 // Words for animated CTA heading
 const words = [
-  "Drop",
-  "us",
-  "a",
-  "line",
-  "or",
-  "two,",
-  "we",
-  "are",
-  "open",
-  "for",
-  "creative",
-  "minds",
+  "Turning",
+  "Your",
+  "Special",
+  "Moments",
+  "into",
+  "Timeless",
+  "Memories",
+  "with",
+  "Style,",
+  "Elegance,",
   "and",
-  "collaborations!",
+  "a",
+  "Personal",
+  "Touch.",
 ];
 
 // Framer Motion Variants
@@ -95,10 +95,18 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex justify-center md:justify-end space-x-5 text-[#f7ece5] text-xl">
-            <a href="#" aria-label="Facebook" className="hover:text-[#d6bf93] transition">
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="hover:text-[#d6bf93] transition"
+            >
               <FaFacebookF />
             </a>
-            <a href="#" aria-label="Instagram" className="hover:text-[#d6bf93] transition">
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="hover:text-[#d6bf93] transition"
+            >
               <FaInstagram />
             </a>
             <a
@@ -110,7 +118,11 @@ const Footer = () => {
             >
               <FaWhatsapp />
             </a>
-            <a href="tel:+919414136807" aria-label="Phone" className="hover:text-[#d6bf93] transition">
+            <a
+              href="tel:+919414136807"
+              aria-label="Phone"
+              className="hover:text-[#d6bf93] transition"
+            >
               <FaPhoneAlt />
             </a>
           </div>
@@ -118,7 +130,9 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center mt-4 px-4 text-xs gap-2 md:gap-0">
-          <p className="text-center md:text-left">© Copyright 2025, All Rights Reserved</p>
+          <p className="text-center md:text-left">
+            © Copyright 2025, All Rights Reserved
+          </p>
           <div className="flex justify-center md:justify-end space-x-4">
             <a href="/privacypolicy" className="hover:underline">
               Privacy Policy

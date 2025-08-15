@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import img1 from "../../../assets/Wedding/wedding1.png";
-import img2 from "../../../assets/Wedding/wedding2.png";
-import img3 from "../../../assets/Wedding/wedding3.png";
-import img4 from "../../../assets/Wedding/wedding4.png";
-import img5 from "../../../assets/Wedding/wedding5.png";
-import img6 from "../../../assets/Wedding/wedding6.png";
-import img7 from "../../../assets/Wedding/wedding7.png";
-import img8 from "../../../assets/Wedding/wedding8.png";
-import img9 from "../../../assets/Wedding/wedding9.png";
+import img1 from "../../../assets/catering/catering1.jpeg";
+import img2 from "../../../assets/catering/catering2.JPG";
+import img3 from "../../../assets/catering/catering3.jpeg";
+import img4 from "../../../assets/catering/catering4.JPG";
+import img5 from "../../../assets/catering/catering5.JPG";
+import img6 from "../../../assets/catering/catering6.JPG";
+import img7 from "../../../assets/catering/catering7.JPG";
+import img8 from "../../../assets/catering/catering8.JPG";
+import img9 from "../../../assets/catering/catering9.jpeg";
 import { X, ChevronLeft, ChevronRight } from "lucide-react"; // Optional: use any icon library
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import img1 from "../../../assets/Wedding/wedding1.png";
-import img2 from "../../../assets/Wedding/wedding2.png";
-import img3 from "../../../assets/Wedding/wedding3.png";
-import img4 from "../../../assets/Wedding/wedding4.png";
-import img5 from "../../../assets/Wedding/wedding5.png";
-import img6 from "../../../assets/Wedding/wedding6.png";
-import img7 from "../../../assets/Wedding/wedding7.png";
-import img8 from "../../../assets/Wedding/wedding8.png";
-import img9 from "../../../assets/Wedding/wedding9.png";
+import img1 from "../../../assets/Engagement/engagement1.jpg";
+import img2 from "../../../assets/Engagement/engagement2.jpg";
+import img3 from "../../../assets/Engagement/engagement3.png";
+import img4 from "../../../assets/Engagement/engagement4.png";
+import img5 from "../../../assets/Engagement/engagement5.png";
+import img6 from "../../../assets/Engagement/engagement6.png";
+import img7 from "../../../assets/Engagement/engagement7.png";
+import img8 from "../../../assets/Engagement/engagement8.png";
+import img9 from "../../../assets/Engagement/engagement9.png";
 import { X, ChevronLeft, ChevronRight } from "lucide-react"; // Optional: use any icon library
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];

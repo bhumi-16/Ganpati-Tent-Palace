@@ -35,7 +35,7 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const whatsappNumber = "917427802555"; 
+    const whatsappNumber = "917427802555";
 
     const whatsappMessage = `New Event Booking Request!!!
 Name: ${name || "N/A"}
@@ -54,7 +54,10 @@ Message: ${message || "N/A"}`;
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#e6dfda] font-sans px-4 py-8" id="contact">
+    <div
+      className="min-h-screen flex items-center justify-center bg-[#e6dfda] font-sans px-4 py-8"
+      id="contact"
+    >
       <div className="bg-[#d2aaaa] p-8 rounded-[2rem] shadow-lg w-full max-w-3xl relative">
         <h2
           className="text-xl sm:text-2xl font-semibold text-center text-[#3d1f2a] italic mb-6 font-leckerli"
@@ -64,7 +67,7 @@ Message: ${message || "N/A"}`;
         >
           Tell us about your event idea!
         </h2>
-        <form 
+        <form
           className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[#3d1f2a] font-playpen"
           onSubmit={handleSubmit}
         >
@@ -126,8 +129,8 @@ Message: ${message || "N/A"}`;
               <option>Corporate Event</option>
               <option>Naming Ceremony</option>
               <option>Engagement</option>
-              <option>Housewarming</option>
-              <option>Other</option>
+              <option>Inauguration</option>
+              <option>Others</option>
             </select>
           </div>
 
@@ -150,9 +153,10 @@ Message: ${message || "N/A"}`;
             <div className="mt-1 border border-black rounded-xl p-2 font-poppins max-h-[150px] overflow-y-auto">
               {[
                 "Venue Decoration",
+                "Bhawan Booking",
                 "Photography",
                 "Catering Services",
-                "Music",
+                "Light & Music",
                 "Makeup Services",
               ].map((service) => (
                 <div key={service} className="flex items-center space-x-2 py-1">

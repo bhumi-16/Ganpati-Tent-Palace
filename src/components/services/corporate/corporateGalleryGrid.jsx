@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import img1 from "../../../assets/Wedding/wedding1.png";
-import img2 from "../../../assets/Wedding/wedding2.png";
-import img3 from "../../../assets/Wedding/wedding3.png";
-import img4 from "../../../assets/Wedding/wedding4.png";
+import img1 from "../../../assets/corporate/corporate1.png";
+import img2 from "../../../assets/corporate/corporate2.png";
+import img3 from "../../../assets/corporate/corporate3.png";
+import img4 from "../../../assets/corporate/corporate4.png";
 import img5 from "../../../assets/Wedding/wedding5.png";
 import img6 from "../../../assets/Wedding/wedding6.png";
 import img7 from "../../../assets/Wedding/wedding7.png";

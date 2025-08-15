@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import serviceImg from "../../assets/services/serviceImg.png";
-import floralTop from "../../assets/AboutFlower.png";
+import floralTop from "../../assets/AboutFlowers.png";
 import floralBottom from "../../assets/AboutFlower.png";
 
 // Services mapped with categories
@@ -44,13 +44,11 @@ const OurServices = () => {
         src={floralTop}
         alt="Floral Background Top"
         className="hidden lg:block absolute top-0 left-0 w-auto max-w-[1500px] opacity-20 pointer-events-none z-0 scale-x-[-1]"
-
       />
       <img
         src={floralBottom}
         alt="Floral Background Bottom"
         className="hidden lg:block absolute bottom-0 right-0 w-auto max-w-[1500px] opacity-20 pointer-events-none z-0"
-
       />
 
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -81,7 +79,7 @@ const OurServices = () => {
             return (
               <Link to={path} key={i}>
                 <div
-                  className="relative rounded-xl overflow-hidden shadow-[0_8px_20px_rgba(0,0,0,0.2)] border border-[#ececec] group transform transition-transform duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(0,0,0,0.25)]"
+                  className="relative rounded-xl overflow-hidden shadow-[0_8px_20px_rgba(0,0,0,0.2)] border border-[#1A0023] group transform transition-transform duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(0,0,0,0.25)]"
                   style={{ backgroundColor: bgColor }}
                 >
                   <div className="overflow-hidden">
@@ -91,9 +89,9 @@ const OurServices = () => {
                       className="w-full h-36 sm:h-44 md:h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-center justify-center px-2 text-center transition-all duration-500 group-hover:from-black/70">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#4E2244]/50 to-transparent flex items-center justify-center px-2 text-center transition-all duration-500 group-hover:from-[#4E2244]/80">
                     <p
-                      className="text-white text-xl sm:text-xl font-semibold leading-tight transform group-hover:scale-105 group-hover:opacity-100 transition-all duration-500"
+                      className="text-[#e6d2d9] text-xl sm:text-xl font-semibold leading-tight transform group-hover:scale-105 group-hover:opacity-100 transition-all duration-500"
                       style={{
                         fontFamily: "'Alex Brush', cursive",
                         letterSpacing: "0.08em",

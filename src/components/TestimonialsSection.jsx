@@ -2,33 +2,33 @@ import React from "react";
 
 const testimonials = [
   {
-    name: "@premktra.a",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "@manish",
+    text: "Ganpati Tent Palace made our wedding magical! Every detail was perfect and stress-free.",
     img: "https://randomuser.me/api/portraits/women/44.jpg",
   },
   {
-    name: "@jamesonx",
-    text: "I just love how these people build this system.",
+    name: "@shailender",
+    text: "From décor to catering, everything was beyond expectations. Guests still talk about our event!",
     img: "https://randomuser.me/api/portraits/men/46.jpg",
   },
   {
-    name: "@camcomods",
-    text: "A must have UI kit for building my landing pages.",
+    name: "@vikas",
+    text: "Professional, creative, and caring—exactly what we needed for our corporate annual meet.",
     img: "https://randomuser.me/api/portraits/men/51.jpg",
   },
   {
-    name: "@alexabornn",
-    text: "A must have UI kit for building my landing pages.",
+    name: "@alok",
+    text: "They transformed our backyard into a dream engagement venue. Truly unforgettable!",
     img: "https://randomuser.me/api/portraits/women/55.jpg",
   },
   {
-    name: "@tmarina",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "@jyoti",
+    text: "Our college festival was a grand success, thanks to their flawless planning and vibrant setup.",
     img: "https://randomuser.me/api/portraits/women/65.jpg",
   },
   {
-    name: "@chrisin_pa",
-    text: "I just love how these people build this system.",
+    name: "@nishant",
+    text: "Beautiful designs, tasty food, and warm hospitality. They make celebrations truly special.",
     img: "https://randomuser.me/api/portraits/men/63.jpg",
   },
 ];
@@ -36,9 +36,9 @@ const testimonials = [
 const TestimonialsSection = () => {
   return (
     <section className="bg-[#c8a6b3] text-[#5a2a49] py-16 px-4 text-center overflow-hidden">
-      <p className="text-xs tracking-widest mb-2">12K+ HAPPY CUSTOMERS</p>
+      <p className="text-xs tracking-widest mb-2">50K+ HAPPY CUSTOMERS</p>
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 break-words">
-        Users love Landingfolio
+        Stories of Celebration & Joy
       </h2>
 
       {/* Testimonials Grid */}

@@ -28,15 +28,15 @@ const TextSection = () => {
       />
 
       {/* Text */}
-      <p className="text-[#e8d1a6] text-center text-xl sm:text-2xl md:text-3xl font-body leading-relaxed max-w-4xl font-semibold z-10">
-        At Ganpati Tent Palace, we specialize in creating elegant and
-        unforgettable wedding experiences. From royal mandap setups and floral
-        stage decorations to customized bride-groom entries and traditional
-        lighting, we handle every detail with care and creativity. Our team
-        brings your vision to life with beautiful tent designs, guest seating,
-        catering, and more. Whether it's a grand celebration or a simple
-        ceremony, we ensure everything runs smoothly and looks stunning. Make
-        your big day truly special with us by your side.
+      <p className="text-[#e698d4] text-center text-xl sm:text-2xl md:text-3xl font-body leading-relaxed max-w-4xl font-semibold z-10">
+        Celebrate the beginning of your forever with Ganpati Tent Palace’s
+        beautifully curated engagement event services. From elegant décor and
+        lighting to customized seating arrangements and stage setups, we create
+        a warm and romantic atmosphere for your special day. Our team pays
+        attention to every detail, ensuring a flawless experience for you and
+        your guests. Whether it’s a grand celebration or an intimate gathering,
+        we design the event to reflect your unique love story and style, making
+        it truly unforgettable.
       </p>
     </div>
   );

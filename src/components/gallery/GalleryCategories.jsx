@@ -2,7 +2,7 @@ import React from "react";
 import bgFloral from "../../assets/AboutFlower.png";
 
 const categories = [
-  "Wedding Gallery",
+  "venue",
   "Corporate Events",
   "Birthday Gallery",
   "Theme-based Events",
@@ -34,14 +34,13 @@ const GalleryCategories = ({ selectedCategory, setSelectedCategory }) => {
               <button
                 key={index}
                 onClick={() => setSelectedCategory(title)}
-                className={`bg-[#3d293e]/90 text-white text-center rounded-2xl shadow-lg transition-transform hover:scale-105
+                className={`bg-[#3d293e]/90 text-[#eedae1] text-center rounded-2xl shadow-lg transition-transform hover:scale-105
                   w-full aspect-square flex items-center justify-center p-4 sm:w-64 sm:aspect-auto
                   ${
                     // For "Others" on small screens, span 1 column instead of 2
                     isLastItem
-  ? "col-span-1 justify-self-center sm:justify-self-auto"
-  : ""
-
+                      ? "col-span-1 justify-self-center sm:justify-self-auto"
+                      : ""
                   }
                   ${isSelected ? "ring-4 ring-purple-500" : ""}
                 `}
