@@ -67,7 +67,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#f6efe5] shadow-sm">
+    <header className="sticky top-0 z-50 bg-[#f6efe5] shadow-sm font-[Leckerli One]">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         {/* Left links (desktop) */}
         <ul className="hidden lg:flex gap-6 items-center text-2xl font-bold text-royal relative tracking-wider">

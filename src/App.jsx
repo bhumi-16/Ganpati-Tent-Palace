@@ -22,7 +22,7 @@ import ContactUs from "./components/contact us/ContactUs";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermAndConditions from "./components/TermAndConditions";
 import Wedding from "./components/services/wedding/Wedding";
-import Baby from "./components/services/baby/baby";
+import Cultural from "./components/services/cultural/cultural";
 import Birthday from "./components/services/birthday/birthday";
 import Catering from "./components/services/catering/catering";
 import College from "./components/services/college/college";
@@ -30,7 +30,7 @@ import Corporate from "./components/services/corporate/corporate";
 import Engagement from "./components/services/engagement/engagement";
 import Entry from "./components/services/entry/entry";
 import Government from "./components/services/government/government";
-import School from "./components/services/school/school";
+import Mandap from "./components/services/Mandap/mandap";
 import Stage from "./components/services/stage/stage";
 import Themes from "./components/services/themes/themes";
 import ScrollToTop from "./components/ScrollToTop";
@@ -61,8 +61,8 @@ const App = () => {
           element={<Wedding />}
         />
         <Route
-          path="/services/baby/baby-shower"
-          element={<Baby />}
+          path="/services/cultural/cultural-decoration"
+          element={<Cultural />}
         />
         <Route
           path="/services/birthday/birthday-decoration"
@@ -93,8 +93,8 @@ const App = () => {
           element={<Government />}
         />
         <Route
-          path="/services/school/annual-function"
-          element={<School />}
+          path="/services/Mandap/mandap-decoration"
+          element={<Mandap />}
         />
         <Route
           path="/services/stage/stage-decoration"

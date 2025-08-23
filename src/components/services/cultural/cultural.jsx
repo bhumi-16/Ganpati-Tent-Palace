@@ -1,10 +1,10 @@
 import React from "react";
-import bgImage from "../../../assets/Wedding/wedding.jpeg";
-import BabyGalleryGrid from "./babyGalleryGrid";
-import BabyStyledParagraph from "./babyStyledParagraph";
-import BabyDetails from "./babyDetails";
+import bgImage from "../../../assets/cultural/cultural.png";
+import CulturalGalleryGrid from "./culturalGalleryGrid";
+import CulturalStyledParagraph from "./culturalStyledParagraph";
+import CulturalDetails from "./culturalDetails";
 
-const Baby = () => {
+const Cultural = () => {
   return (
     <div className="w-full">
       {/* Hero Banner */}
@@ -15,7 +15,7 @@ const Baby = () => {
         <div className="absolute inset-0 bg-[#5a2a50]/60" />
         <div className="absolute inset-0 flex items-center justify-center px-4">
   <div className="bg-[#310924] text-white text-sm sm:text-lg md:text-2xl lg:text-3xl font-bold px-4 py-2 sm:px-6 sm:py-4 rounded-2xl shadow-lg text-center max-w-full break-words">
-    Baby Shower
+    Cultural Decoration
   </div>
 </div>
 
@@ -23,15 +23,15 @@ const Baby = () => {
       </div>
 
       {/* Description Paragraph */}
-      <BabyStyledParagraph />
+      <CulturalStyledParagraph />
 
       {/* Gallery */}
-      <BabyGalleryGrid />
+      <CulturalGalleryGrid />
 
-      {/* Baby Details */}
-      <BabyDetails />
+      {/* Cultural Details */}
+      <CulturalDetails />
     </div>
   );
 };
 
-export default Baby;
+export default Cultural;

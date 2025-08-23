@@ -19,7 +19,7 @@ export default {
         alice: ["Alice", "serif"],
         leckerli: ['"Leckerli One"', "cursive"],
         playpen: ['"Playpen Sans"', "cursive"],
-        poppins: ["Poppins", "sans-serif"],
+        poppins: ['"Poppins"', "sans-serif"],
         playwrite: ['"Playfair Display"', "serif"],
       },
       keyframes: {

@@ -2,15 +2,12 @@ import React from "react";
 import bgFloral from "../../assets/AboutFlower.png";
 
 const categories = [
-  "venue",
-  "Corporate Events",
-  "Birthday Gallery",
-  "Theme-based Events",
-  "Catering Services",
-  "Baby Shower",
-  "Annual Function",
-  "College Festival",
-  "Others",
+  "Venue",
+  "Flower Decoration",
+  "Chair Design",
+  "Sofa Design",
+  "Themes",
+  "Outdoor Decoration",
 ];
 
 const GalleryCategories = ({ selectedCategory, setSelectedCategory }) => {

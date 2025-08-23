@@ -15,9 +15,9 @@ const services = [
   { title: "Stage Decoration", category: "stage" },
   { title: "College Festival", category: "college" },
   { title: "Catering Services", category: "catering" },
-  { title: "Baby Shower", category: "baby" },
+  { title: "Cultural Decoration", category: "cultural" },
   { title: "Government Function", category: "government" },
-  { title: "Annual Function", category: "school" },
+  { title: "Mandap Decoration", category: "mandap" },
 ];
 
 const OurServices = () => {

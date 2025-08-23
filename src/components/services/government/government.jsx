@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../../../assets/Wedding/wedding.jpeg";
+import bgImage from "../../../assets/government/government.png";
 import GovernmentGalleryGrid from "./governmentGalleryGrid";
 import GovernmentStyledParagraph from "./governmentStyledParagraph";
 import GovernmentDetails from "./GovernmentDetails";

@@ -5,6 +5,7 @@ import weddingImg from "../assets/Wedding.jpeg";
 import bday from "../assets/bday.png";
 import cateringImg from "../assets/Catering.jpeg";
 import flowerBg from "../assets/offerbg.png";
+import { Link } from "react-router-dom";
 
 const cardVariants = {
   hidden: { opacity: 0, x: 100 },
@@ -19,39 +20,42 @@ const cardVariants = {
 };
 
 // Single Offer Card Component
-const OfferCard = ({ img, title, delay }) => {
+const OfferCard = ({ img, title, delay, link }) => {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
   });
 
   return (
-    <motion.div
-      ref={ref}
-      className={`group relative w-full max-w-[300px] h-[200px] overflow-hidden cursor-pointer rounded-md ${
-        delay === 1 ? "mt-4 md:mt-24" : ""
-      }`}
-      variants={cardVariants}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-    >
-      <img
-        src={img}
-        alt={title}
-        className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-300"
-      />
-      <p className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-[#4c1d39] px-2 group-hover:underline group-hover:text-[#fceeea] whitespace-pre-line text-center">
-        {title}
-      </p>
-    </motion.div>
+    <Link to={link} className="no-underline">
+      <motion.div
+  ref={ref}
+  className={`group relative w-full max-w-[300px] aspect-[16/9] overflow-hidden cursor-pointer rounded-md ${
+    delay === 1 ? "mt-4 md:mt-24" : ""
+  }`}
+  variants={cardVariants}
+  initial="hidden"
+  animate={inView ? "visible" : "hidden"}
+>
+  <img
+    src={img}
+    alt={title}
+    className="w-full h-full object-cover object-center opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-300"
+  />
+  <p className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-[#4c1d39] px-2 group-hover:underline group-hover:text-[#fceeea] whitespace-pre-line text-center">
+    {title}
+  </p>
+</motion.div>
+
+    </Link>
   );
 };
 
 const WhatWeOfferSection = () => {
   const cards = [
-    { img: weddingImg, title: "Wedding\nDecoration" },
-    { img: bday, title: "Theme-based\nBirthday Party" },
-    { img: cateringImg, title: "Catering\nServices" },
+    { img: weddingImg, title: "Wedding\nDecoration", link: "/services/wedding/wedding-decoration" },
+    { img: bday, title: "Theme-based\nBirthday Party", link: "/services/birthday/birthday-decoration" },
+    { img: cateringImg, title: "Catering\nServices", link: "/services/catering/catering-services" },
   ];
 
   return (
@@ -83,6 +87,7 @@ const WhatWeOfferSection = () => {
             img={card.img}
             title={card.title}
             delay={index}
+            link={card.link}
           />
         ))}
       </div>

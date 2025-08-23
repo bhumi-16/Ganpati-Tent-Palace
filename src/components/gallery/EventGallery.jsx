@@ -1,44 +1,42 @@
 import React, { useState, useEffect } from "react";
 
-// Webpack's dynamic import for images in one folder
-const imageContext = require.context("../../assets/gallery", false, /\.(jpg|jpeg|png)$/);
+const venueContext = require.context("../../assets/gallery/venue", false, /\.(jpg|jpeg|png)$/);
+const flowerContext = require.context("../../assets/gallery/Flowerdecoration", false, /\.(jpg|jpeg|png)$/);
+const chairContext = require.context("../../assets/gallery/Chairdesign", false, /\.(jpg|jpeg|png)$/);
+const sofaContext = require.context("../../assets/gallery/Sofadesigns", false, /\.(jpg|jpeg|png)$/);
+const themeContext = require.context("../../assets/gallery/theme", false, /\.(jpg|jpeg|png)$/);
+const outdoorContext = require.context("../../assets/gallery/outdoor", false, /\.(jpg|jpeg|png)$/);
 
-const allImages = imageContext.keys().map((key) => ({
-  src: imageContext(key),
-  name: key.toLowerCase(), // For filtering
-}));
+const importAll = (context) => context.keys().map(context);
 
-const getImagesForCategory = (category) => {
-  // Remove extra words like "gallery", "events", "services", etc.
-  const formatted = category
-    .toLowerCase()
-    .replace(" gallery", "")
-    .replace(" events", "")
-    .replace(" services", "")
-    .replace(" based", "")
-    .trim();
-
-  return allImages
-    .filter((img) => img.name.includes(formatted))
-    .map((img) => img.src);
+const galleries = {
+  Venue: importAll(venueContext),
+  "Flower decoration": importAll(flowerContext),
+  "Chair design": importAll(chairContext),
+  "Sofa design": importAll(sofaContext),
+  Themes: importAll(themeContext),
+  "Outdoor Decoration": importAll(outdoorContext),
 };
 
 
-const getRandomImages = (count = 9) => {
-  const all = allImages.map((img) => img.src);
-  return all.sort(() => 0.5 - Math.random()).slice(0, count);
-};
-
-// ✅ Only this one definition of EventGallery
 const EventGallery = ({ selectedCategory }) => {
   const [imagesToShow, setImagesToShow] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   useEffect(() => {
     if (selectedCategory && selectedCategory !== "All") {
-      setImagesToShow(getImagesForCategory(selectedCategory));
+      const formatted = selectedCategory.trim().toLowerCase();
+      const matchedKey = Object.keys(galleries).find(
+        (key) => key.toLowerCase() === formatted
+      );
+      if (matchedKey) {
+        setImagesToShow(galleries[matchedKey]);
+      } else {
+        setImagesToShow([]);
+      }
     } else {
-      setImagesToShow(getRandomImages());
+      const all = Object.values(galleries).flat();
+      setImagesToShow(all.sort(() => 0.5 - Math.random()).slice(0, 9));
     }
   }, [selectedCategory]);
 
