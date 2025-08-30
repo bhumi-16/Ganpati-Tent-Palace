@@ -1,39 +1,44 @@
-import React from "react";
-
-const testimonials = [
-  {
-    name: "@manish",
-    text: "Ganpati Tent Palace made our wedding magical! Every detail was perfect and stress-free.",
-    img: "https://randomuser.me/api/portraits/women/44.jpg",
-  },
-  {
-    name: "@shailender",
-    text: "From décor to catering, everything was beyond expectations. Guests still talk about our event!",
-    img: "https://randomuser.me/api/portraits/men/46.jpg",
-  },
-  {
-    name: "@vikas",
-    text: "Professional, creative, and caring—exactly what we needed for our corporate annual meet.",
-    img: "https://randomuser.me/api/portraits/men/51.jpg",
-  },
-  {
-    name: "@alok",
-    text: "They transformed our backyard into a dream engagement venue. Truly unforgettable!",
-    img: "https://randomuser.me/api/portraits/women/55.jpg",
-  },
-  {
-    name: "@jyoti",
-    text: "Our college festival was a grand success, thanks to their flawless planning and vibrant setup.",
-    img: "https://randomuser.me/api/portraits/women/65.jpg",
-  },
-  {
-    name: "@nishant",
-    text: "Beautiful designs, tasty food, and warm hospitality. They make celebrations truly special.",
-    img: "https://randomuser.me/api/portraits/men/63.jpg",
-  },
-];
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const TestimonialsSection = () => {
+  const [testimonials, setTestimonials] = useState([]);
+  const [showAll, setShowAll] = useState(false);
+
+  // Fetch comments from API
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/comments");
+        setTestimonials(response.data);// Assuming API returns [{ username, content, img }]
+        // Sort by newest first
+        const sorted = response.data.sort(
+          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+        );
+        setTestimonials(sorted);
+      } catch (error) {
+        console.error("Error fetching comments:", error);
+      }
+    };
+
+    fetchComments();
+  }, []);
+
+  // Function to generate initials
+  const getInitials = (name) => {
+    if (!name) return "?";
+    const parts = name.trim().split(" ");
+    if (parts.length >= 2) {
+      return (
+        parts[0][0].toUpperCase() + parts[1][0].toUpperCase()
+      ); // First + Last
+    }
+    return parts[0][0].toUpperCase(); // Only first name
+  };
+
+  // Decide what to display
+  const displayed = showAll ? testimonials : testimonials.slice(0, 6);
+
   return (
     <section className="bg-[#c8a6b3] text-[#5a2a49] py-16 px-4 text-center overflow-hidden">
       <p className="text-xs tracking-widest mb-2">50K+ HAPPY CUSTOMERS</p>
@@ -43,31 +48,50 @@ const TestimonialsSection = () => {
 
       {/* Testimonials Grid */}
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto">
-        {testimonials.map((testimonial, index) => {
-          // Show only first 3 on small screens, all on md+
-          const isHiddenOnMobile = index > 2 ? "hidden md:flex" : "flex";
-
-          return (
+        {displayed.length > 0 ? (
+          displayed.map((testimonial, index) => (
             <div
               key={index}
-              className={`${isHiddenOnMobile} flex-col sm:flex-row bg-[#e6d2d9] text-[#5a2a49] px-4 py-4 rounded-full items-center gap-4 min-w-0 overflow-hidden mx-auto w-full sm:w-auto`}
+              className="flex flex-col sm:flex-row items-center sm:items-start 
+              bg-[#e6d2d9] text-[#5a2a49] px-5 py-4 rounded-xl gap-4 
+              w-full sm:w-[320px] min-h-[120px] mx-auto shadow-md"
             >
-              <img
-                src={testimonial.img}
-                alt={testimonial.name}
-                className="w-10 h-10 rounded-full object-cover"
-              />
-              <p className="text-sm text-center sm:text-left break-words">
-                <span className="block">{testimonial.text}</span>
-                <span className="font-semibold block">{testimonial.name}</span>
-              </p>
+              {/* Avatar or Initials */}
+              {testimonial.img ? (
+                <img
+                  src={testimonial.img}
+                  alt={testimonial.username}
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+              ) : (
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#5a2a49] text-white font-bold text-lg">
+                  {getInitials(testimonial.username)}
+                </div>
+              )}
+
+              {/* Message */}
+              <div className="text-sm text-center sm:text-left break-words flex-1">
+                <p className="mb-1">{testimonial.content}</p>
+                <p className="font-semibold">~{testimonial.username}</p>
+              </div>
             </div>
-          );
-        })}
+          ))
+        ) : (
+          <p className="text-sm text-[#3e1831]">No reviews yet.</p>
+        )}
       </div>
 
       {/* Footer Link */}
-      <div className="mt-10 text-sm">Read All 2,682 Reviews</div>
+      {testimonials.length > 6 && (
+        <div className="mt-10 text-sm">
+          <button
+            onClick={() => setShowAll((prev) => !prev)}
+            className="text-[#5a2a49] font-semibold underline hover:text-[#3e1831]"
+          >
+            {showAll ? "Show Less Reviews" : "Read All Reviews"}
+          </button>
+        </div>
+      )}
     </section>
   );
 };
