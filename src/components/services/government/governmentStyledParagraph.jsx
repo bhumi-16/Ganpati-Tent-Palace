@@ -31,12 +31,19 @@ const TextSection = () => {
       <p className="text-[#e698d4] text-center text-lg sm:text-xl md:text-3xl leading-relaxed max-w-4xl font-medium z-10">
         {/* Short version for mobile */}
         <span className="block sm:hidden">
-         At Ganpati Tent Palace, we create elegant weddings with beautiful setups, personalized touches, and seamless execution for your special day.
+          At Ganpati Tent Palace, we create elegant weddings with beautiful
+          setups, personalized touches, and seamless execution for your special
+          day.
         </span>
 
         {/* Full version for tablet & larger screens */}
         <span className="hidden sm:block">
-           At Ganpati Tent Palace, we specialize in creating elegant and unforgettable wedding experiences. From royal mandap setups and floral stage decorations to customized bride-groom entries and traditional lighting, we handle every detail with care and creativity. Our team brings your vision to life with beautiful tent designs, guest seating, catering, and more. Whether it's a grand celebration or a simple ceremony, we ensure everything runs smoothly and looks stunning. Make your big day truly special with us by your side.
+          Our Government Events are organized with precision and professionalism
+          to ensure impactful gatherings. From official meetings, inaugurations,
+          and awareness programs to large-scale public events, we manage every
+          detail with care. Our focus is on smooth coordination, timely
+          execution, and meaningful outcomes that reflect the vision and values
+          of government initiatives, ensuring trust and excellence.
         </span>
       </p>
     </div>

@@ -1,23 +1,46 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import serviceImg from "../../assets/services/serviceImg.png";
+
+// Import images for each service
+import weddingImg from "../../assets/services/wedding.JPG";
+import engagementImg from "../../assets/services/engagement.JPG";
+import birthdayImg from "../../assets/services/birthday.jpeg";
+import themeImg from "../../assets/services/theme.JPG";
+import entryImg from "../../assets/services/entry.JPG";
+import corporateImg from "../../assets/services/corporate.jpeg";
+import stageImg from "../../assets/services/stage.jpg";
+import collegeImg from "../../assets/services/college.jpeg";
+import cateringImg from "../../assets/services/catering.jpeg";
+import culturalImg from "../../assets/services/cultural.jpeg";
+import governmentImg from "../../assets/services/government.jpeg";
+import mandapImg from "../../assets/services/mandap.png";
+
+// Floral backgrounds
 import floralTop from "../../assets/AboutFlowers.png";
 import floralBottom from "../../assets/AboutFlower.png";
 
-// Services mapped with categories
+// Services with separate images
 const services = [
-  { title: "Wedding Decoration", category: "wedding" },
-  { title: "Engagement Decoration", category: "engagement" },
-  { title: "Birthday Decoration", category: "birthday" },
-  { title: "Theme-based Events", category: "themes" },
-  { title: "Bride Groom Entry", category: "entry" },
-  { title: "Corporate Events", category: "corporate" },
-  { title: "Stage Decoration", category: "stage" },
-  { title: "College Festival", category: "college" },
-  { title: "Catering Services", category: "catering" },
-  { title: "Cultural Decoration", category: "cultural" },
-  { title: "Government Function", category: "government" },
-  { title: "Mandap Decoration", category: "mandap" },
+  { title: "Wedding Decoration", category: "wedding", image: weddingImg },
+  {
+    title: "Engagement Decoration",
+    category: "engagement",
+    image: engagementImg,
+  },
+  { title: "Birthday Decoration", category: "birthday", image: birthdayImg },
+  { title: "Theme-based Events", category: "themes", image: themeImg },
+  { title: "Bride Groom Entry", category: "entry", image: entryImg },
+  { title: "Corporate Events", category: "corporate", image: corporateImg },
+  { title: "Stage Decoration", category: "stage", image: stageImg },
+  { title: "College Festival", category: "college", image: collegeImg },
+  { title: "Catering Services", category: "catering", image: cateringImg },
+  { title: "Cultural Decoration", category: "cultural", image: culturalImg },
+  {
+    title: "Government Function",
+    category: "government",
+    image: governmentImg,
+  },
+  { title: "Mandap Decoration", category: "mandap", image: mandapImg },
 ];
 
 const OurServices = () => {
@@ -84,7 +107,7 @@ const OurServices = () => {
                 >
                   <div className="overflow-hidden">
                     <img
-                      src={serviceImg}
+                      src={service.image}
                       alt={service.title}
                       className="w-full h-36 sm:h-44 md:h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />

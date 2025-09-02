@@ -1,9 +1,9 @@
 import React from "react";
 
 // Dummy images (replace with actual imports or URLs)
-import ach1 from "../../assets/aboutus/story2.png";
-import ach2 from "../../assets/aboutus/story2.png";
-import ach3 from "../../assets/aboutus/story2.png";
+import ach1 from "../../assets/aboutus/b.png";
+import ach2 from "../../assets/aboutus/gita.png";
+import ach3 from "../../assets/aboutus/reception.png";
 
 const achievements = [
   {
@@ -21,7 +21,7 @@ const achievements = [
   {
     image: ach3,
     date: "MAR 15, 2023",
-    title: "Completed 500+ events with 100% satisfaction",
+    title: "Grand Reception Party - A Night to Remember",
     tag: "Milestone",
   },
 ];

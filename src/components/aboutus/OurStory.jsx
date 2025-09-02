@@ -1,6 +1,6 @@
 import React from "react";
 import img1 from "../../assets/aboutus/story1.png"; // back image
-import img2 from "../../assets/aboutus/story2.png"; // front image
+import img2 from "../../assets/aboutus/storyy2.png"; // front image
 
 const OurStory = () => {
   return (
@@ -52,28 +52,25 @@ const OurStory = () => {
           </div>
         </div>
 
-       {/* Image Section */}
-<div className="relative w-full sm:w-1/2 flex justify-center">
-  <div className="relative w-[160px] sm:w-[220px] md:w-[260px] lg:w-[300px] aspect-[3/4]">
-    {/* Background Image */}
-    <img
-      src={img2}
-      alt="Our Story Background"
-      className="w-full h-full object-cover rounded-xl shadow-lg"
-    />
+        {/* Image Section */}
+        <div className="relative w-full sm:w-1/2 flex justify-center">
+          <div className="relative w-[160px] sm:w-[220px] md:w-[260px] lg:w-[300px] aspect-[3/4]">
+            {/* Background Image */}
+            <img
+              src={img2}
+              alt="Our Story Background"
+              className="w-full h-full object-cover rounded-xl shadow-lg"
+            />
 
-    {/* Foreground Image - moderate shift */}
-    <img
-      src={img1}
-      alt="Our Story Foreground"
-       className="w-full object-cover rounded-xl shadow-2xl absolute top-10 left-10 sm:top-24 sm:left-36 max-w-[90%]"
-  style={{ height: "90%" }}
-    />
-  </div>
-</div>
-
-
-
+            {/* Foreground Image - moderate shift */}
+            <img
+              src={img1}
+              alt="Our Story Foreground"
+              className="w-full object-cover rounded-xl shadow-2xl absolute top-10 left-10 sm:top-24 sm:left-36 max-w-[90%]"
+              style={{ height: "90%" }}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

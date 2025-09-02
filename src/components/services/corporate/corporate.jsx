@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../../../assets/corporate/corporate2.png";
+import bgImage from "../../../assets/corporate/corporate.png";
 import CorporateGalleryGrid from "./corporateGalleryGrid";
 import CorporateStyledParagraph from "./corporateStyledParagraph";
 import CorporateDetails from "./CorporateDetails";

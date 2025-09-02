@@ -1,10 +1,10 @@
 import React from "react";
-import gallery1 from "../assets/gallery1.png";
+import gallery1 from "../assets/gallery1.jpeg";
 import gallery2 from "../assets/gallery2.jpeg";
-import gallery3 from "../assets/gallery3.jpeg";
-import gallery4 from "../assets/gallery4.png";
-import gallery5 from "../assets/gallery5.png";
-import gallery6 from "../assets/C4.png";
+import gallery3 from "../assets/gallery3.JPG";
+import gallery4 from "../assets/gallery4.jpg";
+import gallery5 from "../assets/gallery5.JPG";
+import gallery6 from "../assets/gallery6.JPG";
 import flower from "../assets/AboutFlower.png"; // flower background image
 
 const GallerySection = () => {

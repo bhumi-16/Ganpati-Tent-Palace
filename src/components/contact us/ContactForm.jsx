@@ -35,7 +35,7 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const whatsappNumber = "917427802555";
+    const whatsappNumber = "919414136807";
 
     const whatsappMessage = `New Event Booking Request!!!
 Name: ${name || "N/A"}

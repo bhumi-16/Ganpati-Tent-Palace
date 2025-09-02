@@ -3,11 +3,11 @@ import img1 from "../../../assets/corporate/corporate1.png";
 import img2 from "../../../assets/corporate/corporate2.png";
 import img3 from "../../../assets/corporate/corporate3.png";
 import img4 from "../../../assets/corporate/corporate4.png";
-import img5 from "../../../assets/Wedding/wedding5.png";
-import img6 from "../../../assets/Wedding/wedding6.png";
-import img7 from "../../../assets/Wedding/wedding7.png";
-import img8 from "../../../assets/Wedding/wedding8.png";
-import img9 from "../../../assets/Wedding/wedding9.png";
+import img5 from "../../../assets/corporate/corporate5.png";
+import img6 from "../../../assets/corporate/corporate6.png";
+import img7 from "../../../assets/corporate/corporate7.png";
+import img8 from "../../../assets/corporate/corporate8.png";
+import img9 from "../../../assets/corporate/corporate9.png";
 import { X, ChevronLeft, ChevronRight } from "lucide-react"; // Optional: use any icon library
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];

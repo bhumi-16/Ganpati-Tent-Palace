@@ -37,14 +37,10 @@ const TextSection = () => {
 
         {/* Full version for tablet & larger screens */}
         <span className="hidden sm:block">
-          At Ganpati Tent Palace, we specialize in creating elegant and
-          unforgettable wedding experiences. From royal mandap setups and floral
-          stage decorations to customized bride-groom entries and traditional
-          lighting, we handle every detail with care and creativity. Our team
-          brings your vision to life with beautiful tent designs, guest seating,
-          catering, and more. Whether it's a grand celebration or a simple
-          ceremony, we ensure everything runs smoothly and looks stunning. Make
-          your big day truly special with us by your side.
+          Our catering service adds a special touch to your events. Be it
+          weddings, parties, or corporate gatherings, we craft delicious menus,
+          deliver top-quality service, and create a delightful food experience
+          that leaves your guests impressed and satisfied.
         </span>
       </p>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import img1 from "../../../assets/Engagement/engagement1.jpg";
-import img2 from "../../../assets/Engagement/engagement2.jpg";
+import img1 from "../../../assets/Engagement/engagement1.png";
+import img2 from "../../../assets/Engagement/engagemnt2.png";
 import img3 from "../../../assets/Engagement/engagement3.png";
 import img4 from "../../../assets/Engagement/engagement4.png";
 import img5 from "../../../assets/Engagement/engagement5.png";

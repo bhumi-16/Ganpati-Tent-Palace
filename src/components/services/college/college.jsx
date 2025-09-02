@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../../../assets/college/college.png";
+import bgImage from "../../../assets/college/colege.JPG";
 import CollegeGalleryGrid from "./collegeGalleryGrid";
 import CollegeStyledParagraph from "./collegeStyledParagraph";
 import CollegeDetails from "./CollegeDetails";
