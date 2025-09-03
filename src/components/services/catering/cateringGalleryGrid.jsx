@@ -37,7 +37,7 @@ const EventGallery = () => {
 
   return (
     <>
-      <div className="relative bg-[#ede7e2] py-10 px-4 mb-5 pb-5">
+      <div className="w-full bg-[#ede7e2] py-10 px-4">
         <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
           {images.map((img, idx) => (
             <div

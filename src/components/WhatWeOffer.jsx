@@ -70,13 +70,13 @@ const WhatWeOfferSection = () => {
 
       {/* Heading */}
       <h2
-        className="text-4xl sm:text-4xl md:text-5xl font-bold text-[#8b3e68] text-center mb-10 relative z-10"
+        className="text-4xl sm:text-4xl md:text-5xl text-[#8b3e68] text-center mb-10 relative z-10"
         style={{
           fontFamily: "'Alex Brush', cursive",
           letterSpacing: "0.08em",
         }}
       >
-        What We Offer….
+        What We Offer…
       </h2>
 
       {/* Cards */}

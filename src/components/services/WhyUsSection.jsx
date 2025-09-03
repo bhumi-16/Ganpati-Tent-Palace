@@ -6,7 +6,7 @@ const WhyUsSection = () => {
   const points = [
     {
       heading: "15+ Years of Trusted Experience",
-      text: "We’ve been creating beautiful, stress-free events since 2008.",
+      text: "We’ve been creating beautiful, stress-free events since 1997.",
     },
     {
       heading: "One-Stop Event Solution",
