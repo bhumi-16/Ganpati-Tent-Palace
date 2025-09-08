@@ -74,7 +74,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between px-4 gap-6 md:gap-0">
           {/* Logo */}
           <div className="flex items-center justify-center md:justify-start">
-            <img src={logo} alt="Logo" className="h-12 object-contain" />
+            <img src={logo} alt="Logo" className="h-20 object-contain" />
           </div>
 
           {/* Links */}

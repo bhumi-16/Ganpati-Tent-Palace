@@ -1,11 +1,35 @@
 import React, { useState, useEffect } from "react";
 
-const venueContext = require.context("../../assets/gallery/venue", false, /\.(jpg|jpeg|png)$/);
-const flowerContext = require.context("../../assets/gallery/Flowerdecoration", false, /\.(jpg|jpeg|png)$/);
-const chairContext = require.context("../../assets/gallery/Chairdesign", false, /\.(jpg|jpeg|png)$/);
-const sofaContext = require.context("../../assets/gallery/Sofadesigns", false, /\.(jpg|jpeg|png)$/);
-const themeContext = require.context("../../assets/gallery/theme", false, /\.(jpg|jpeg|png)$/);
-const outdoorContext = require.context("../../assets/gallery/outdoor", false, /\.(jpg|jpeg|png)$/);
+const venueContext = require.context(
+  "../../assets/gallery/venue",
+  false,
+  /\.(jpg|jpeg|png)$/
+);
+const flowerContext = require.context(
+  "../../assets/gallery/Flowerdecoration",
+  false,
+  /\.(jpg|jpeg|png)$/
+);
+const chairContext = require.context(
+  "../../assets/gallery/Chairdesign",
+  false,
+  /\.(jpg|jpeg|png)$/
+);
+const sofaContext = require.context(
+  "../../assets/gallery/Sofadesigns",
+  false,
+  /\.(jpg|jpeg|png)$/
+);
+const themeContext = require.context(
+  "../../assets/gallery/theme",
+  false,
+  /\.(jpg|jpeg|png)$/
+);
+const outdoorContext = require.context(
+  "../../assets/gallery/outdoor",
+  false,
+  /\.(jpg|jpeg|png)$/
+);
 
 const importAll = (context) => context.keys().map(context);
 
@@ -17,7 +41,6 @@ const galleries = {
   Themes: importAll(themeContext),
   "Outdoor Decoration": importAll(outdoorContext),
 };
-
 
 const EventGallery = ({ selectedCategory }) => {
   const [imagesToShow, setImagesToShow] = useState([]);
@@ -45,18 +68,22 @@ const EventGallery = ({ selectedCategory }) => {
 
   const showPrev = (e) => {
     e.stopPropagation();
-    setSelectedIndex((prev) => (prev === 0 ? imagesToShow.length - 1 : prev - 1));
+    setSelectedIndex((prev) =>
+      prev === 0 ? imagesToShow.length - 1 : prev - 1
+    );
   };
 
   const showNext = (e) => {
     e.stopPropagation();
-    setSelectedIndex((prev) => (prev === imagesToShow.length - 1 ? 0 : prev + 1));
+    setSelectedIndex((prev) =>
+      prev === imagesToShow.length - 1 ? 0 : prev + 1
+    );
   };
 
   return (
     <section className="w-full py-8 px-4 bg-[#f9f5f0] relative">
       <h2
-        className="text-4xl sm:text-5xl font-semibold text-center text-[#3b1f2b] mb-12"
+        className="text-4xl sm:text-5xl text-center text-[#3b1f2b] mb-12"
         style={{ fontFamily: "'Alex Brush', cursive", letterSpacing: "0.08em" }}
       >
         Our Moments

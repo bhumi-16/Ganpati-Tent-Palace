@@ -29,33 +29,44 @@ const OfferCard = ({ img, title, delay, link }) => {
   return (
     <Link to={link} className="no-underline">
       <motion.div
-  ref={ref}
-  className={`group relative w-full max-w-[300px] aspect-[16/9] overflow-hidden cursor-pointer rounded-md ${
-    delay === 1 ? "mt-4 md:mt-24" : ""
-  }`}
-  variants={cardVariants}
-  initial="hidden"
-  animate={inView ? "visible" : "hidden"}
->
-  <img
-    src={img}
-    alt={title}
-    className="w-full h-full object-cover object-center opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-300"
-  />
-  <p className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-[#4c1d39] px-2 group-hover:underline group-hover:text-[#fceeea] whitespace-pre-line text-center">
-    {title}
-  </p>
-</motion.div>
-
+        ref={ref}
+        className={`group relative w-full max-w-[300px] aspect-[16/9] overflow-hidden cursor-pointer rounded-md ${
+          delay === 1 ? "mt-4 md:mt-24" : ""
+        }`}
+        variants={cardVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+      >
+        <img
+          src={img}
+          alt={title}
+          className="w-full h-full object-cover object-center opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-300"
+        />
+        <p className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-[#4c1d39] px-2 group-hover:underline group-hover:text-[#fceeea] whitespace-pre-line text-center">
+          {title}
+        </p>
+      </motion.div>
     </Link>
   );
 };
 
 const WhatWeOfferSection = () => {
   const cards = [
-    { img: weddingImg, title: "Wedding\nDecoration", link: "/services/wedding/wedding-decoration" },
-    { img: bday, title: "Theme-based\nBirthday Party", link: "/services/birthday/birthday-decoration" },
-    { img: cateringImg, title: "Catering\nServices", link: "/services/catering/catering-services" },
+    {
+      img: weddingImg,
+      title: "Wedding\nDecoration",
+      link: "/services/wedding/wedding-decoration",
+    },
+    {
+      img: bday,
+      title: "Theme-based\nBirthday Party",
+      link: "/services/birthday/birthday-decoration",
+    },
+    {
+      img: cateringImg,
+      title: "Catering\nServices",
+      link: "/services/catering/catering-services",
+    },
   ];
 
   return (
@@ -64,7 +75,7 @@ const WhatWeOfferSection = () => {
       <img
         src={flowerBg}
         alt="floral design"
-        className="hidden min-[701px]:block absolute top-0 left-[-80px] w-[400px] md:w-[600px] lg:w-[750px] h-full opacity-30 rotate-[-5deg] pointer-events-none z-0"
+        className="hidden min-[701px]:block absolute top-0 left-[-80px] w-[400px] md:w-[500px] lg:w-[550px] h-full opacity-30 rotate-[-5deg] pointer-events-none z-0"
         aria-hidden="true"
       />
 

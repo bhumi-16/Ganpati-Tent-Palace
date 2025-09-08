@@ -1,54 +1,57 @@
 import React from "react";
 
 // Import your images
-import img1 from "../../assets/gallery/birthday1.jpg";
-import img2 from "../../assets/gallery/birthday2.jpg";
-import img3 from "../../assets/gallery/birthday3.jpg";
-import img4 from "../../assets/gallery/wedding4.jpg";
-import img5 from "../../assets/gallery/wedding5.jpg";
-import img6 from "../../assets/gallery/wedding6.jpg";
+import img1 from "../../assets/gallery/krishnagarden.jpeg";
+import img2 from "../../assets/gallery/park.JPG";
+import img3 from "../../assets/gallery/gangamahal.JPG";
+import img4 from "../../assets/gallery/vijay.JPG";
+import img5 from "../../assets/gallery/sagar.JPG";
+import img6 from "../../assets/gallery/sadul.JPG";
+
+// Import star image
+import starIcon from "../../assets/star1.png";
 
 const moments = [
   {
-    title: "Rajasthani Royal Wedding",
-    location: "Udaipur, 2024",
+    title: "Krishna Garden",
+    location: "Bikaner, 2019",
     description:
-      "A vibrant royal-themed wedding with traditional decor, folk performances, and palatial backdrops.",
+      "A beautiful garden wedding filled with flowers and love. Perfect for a peaceful and elegant ceremony.",
     image: img1,
   },
   {
-    title: "Baby Shower - Garden Bliss",
-    location: "Ajmer, 2024",
+    title: "The Park Paradise – Black Theme",
+    location: "Bikaner, 2022",
     description:
-      "An intimate outdoor event with pastel florals, balloon arches, and cozy picnic setups.",
+      "A stylish wedding with a black theme and luxury decor. Modern vibes meet tradition for a unique celebration.",
     image: img2,
   },
   {
-    title: "Festive Diwali Event",
-    location: "Office Premises, 2023",
+    title: "Maharaja Ganga Mahal",
+    location: "Bikaner, 2023",
     description:
-      "Rangoli competition, diya lighting, and ethnic dress contest for employees.",
+      "Grand wedding venue with royal ambiance and rich culture. Create unforgettable memories in a majestic setting.",
     image: img3,
   },
   {
-    title: "Haldi Splash Party",
-    location: "Bikaner, 2023",
+    title: "Vijay Bhawan Palace",
+    location: "Bikaner, 2024",
     description:
-      "A vibrant haldi ceremony with flower showers, dhol beats, and turmeric pools.",
+      "Classic venue for elegant and large weddings. Perfect space for a royal and traditional ceremony.",
     image: img4,
   },
   {
-    title: "Wedding Anniversary - Rustic Charm",
-    location: "Pali, 2024",
+    title: "Hotel Sagar - Grand Reception",
+    location: "Bikaner, 2024",
     description:
-      "Wooden tables, fairy lights, and live acoustic music in a countryside resort.",
+      "Luxurious reception with splendid decor and fine dining. Celebrate your special day in style and grace.",
     image: img5,
   },
   {
-    title: "Sangeet Symphony",
-    location: "Udaipur, 2024",
+    title: "Sadul Club - Grand Wedding",
+    location: "Bikaner, 2025",
     description:
-      "Choreographed couple dance, LED screens, and a musical fountain finale.",
+      "Exclusive venue with a charming and elegant atmosphere. Ideal for intimate, luxurious, and memorable weddings.",
     image: img6,
   },
 ];
@@ -57,15 +60,15 @@ const SpotlightMoments = () => {
   return (
     <section className="w-full py-16 px-4 bg-[#f3dbe3] relative overflow-hidden">
       <h2
-        className="text-4xl sm:text-5xl font-semibold text-center text-[#3b1f2b] mb-12"
+        className="text-4xl sm:text-5xl text-center text-[#3b1f2b] mb-12"
         style={{ fontFamily: "'Alex Brush', cursive", letterSpacing: "0.08em" }}
       >
-        Spotlight Moments ✨
+        Spotlight Moments{" "}
+        <img src={starIcon} alt="star" className="inline-block w-20 h-20" />
       </h2>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-14 max-w-7xl mx-auto text-center">
         {moments.map((item, index) => {
-          // Alternate vertical position: down, up, down...
           const zigzag = index % 2 === 0 ? "translate-y-4" : "-translate-y-4";
 
           return (
