@@ -22,7 +22,7 @@ const Services = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section with slideshow */}
-      <section className="relative h-[35vh] sm:h-[55vh] md:h-[75vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[35vh] sm:h-[60vh] md:h-[85vh] flex items-center justify-center overflow-hidden">
         {slides.map((img, index) => (
           <div
             key={index}

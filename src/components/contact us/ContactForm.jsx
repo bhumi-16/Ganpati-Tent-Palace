@@ -60,7 +60,7 @@ Message: ${message || "N/A"}`;
     >
       <div className="bg-[#d2aaaa] p-8 rounded-[2rem] shadow-lg w-full max-w-3xl relative">
         <h2
-          className="text-xl sm:text-2xl font-semibold text-center text-[#3d1f2a] italic mb-6 font-leckerli"
+          className="text-xl sm:text-2xl text-center text-[#3d1f2a] italic mb-6 font-leckerli"
           style={{
             letterSpacing: "0.08em",
           }}
