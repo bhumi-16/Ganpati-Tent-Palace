@@ -59,7 +59,7 @@ const EventGallery = ({ selectedCategory }) => {
       }
     } else {
       const all = Object.values(galleries).flat();
-      setImagesToShow(all.sort(() => 0.5 - Math.random()).slice(0, 9));
+      setImagesToShow(all.sort(() => 0.5 - Math.random()).slice(0, 12));
     }
   }, [selectedCategory]);
 

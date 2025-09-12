@@ -56,11 +56,13 @@ const AboutUs = () => {
       {/* Our Journey with background and text */}
       <section className="relative py-16 px-6 bg-[#e4bfcd] text-center overflow-hidden">
         {/* Floral BG */}
-        <img
-          src={floralBg}
-          alt="Floral Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none select-none z-0"
-        />
+   <img
+  src={floralBg}
+  alt="Floral Background"
+  className="absolute inset-0 m-auto w-[500px] h-auto max-w-none opacity-20 pointer-events-none select-none z-0"
+/>
+
+
 
         {/* Content */}
         <div className="relative z-10">

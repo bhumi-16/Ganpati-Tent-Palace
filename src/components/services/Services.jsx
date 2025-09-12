@@ -63,7 +63,7 @@ const Services = () => {
         <img
           src={floralBg}
           alt="Floral Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none select-none z-0"
+          className="absolute inset-0 m-auto w-[580px] h-auto max-w-none opacity-20 pointer-events-none select-none z-0"
         />
 
         {/* Content */}
@@ -79,7 +79,7 @@ const Services = () => {
           </h2>
 
           {/* Full text only for medium & large screens */}
-          <p className="hidden sm:block max-w-4xl mx-auto text-[#2e0f1c] font-semibold text-lg md:text-xl leading-relaxed">
+          <p className="hidden sm:block max-w-4xl mx-auto text-[#2e0f1c] font-semibold text-lg md:text-xl leading-relaxed ">
             At Ganpati Tent Palace, we offer complete event solutions for
             weddings, birthdays, corporate events, and more. From elegant
             decorations and theme-based setups to catering and stage design, we

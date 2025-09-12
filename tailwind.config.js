@@ -21,6 +21,7 @@ export default {
         playpen: ['"Playpen Sans"', "cursive"],
         poppins: ['"Poppins"', "sans-serif"],
         playwrite: ['"Playfair Display"', "serif"],
+        alex: ["'Alex Brush'", "cursive"],
       },
       keyframes: {
         fadeInUp: {

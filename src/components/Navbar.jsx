@@ -63,7 +63,7 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     dropdownTimeout.current = setTimeout(() => {
       setOpenDropdown(null);
-    }, 200); // Delay to allow user to move cursor
+    }, 200);
   };
 
   return (
@@ -84,14 +84,14 @@ const Navbar = () => {
               {link.submenu && openDropdown === link.name && (
                 <ul
                   ref={dropdownRef}
-                  className="absolute left-0 top-full mt-2 w-56 bg-white text-sm text-black shadow-lg rounded-md z-50"
+                  className="absolute left-0 top-full mt-2 w-56 bg-white shadow-lg rounded-md z-50"
                   onMouseEnter={() => handleMouseEnter(link.name)}
                   onMouseLeave={handleMouseLeave}
                 >
                   {link.submenu.map((sublink) => (
                     <li
                       key={sublink.name}
-                      className="hover:bg-gray-100 px-4 py-2"
+                      className="hover:bg-purple-100 px-4 py-2 font-alex text-royal text-lg font-extrabold tracking-wide"
                     >
                       <Link to={sublink.path}>{sublink.name}</Link>
                     </li>
@@ -152,9 +152,12 @@ const Navbar = () => {
 
                 {/* Submenu for mobile */}
                 {link.submenu && (
-                  <ul className="pl-4 mt-2 text-sm space-y-1">
+                  <ul className="pl-4 mt-2 space-y-1">
                     {link.submenu.map((sublink) => (
-                      <li key={sublink.name}>
+                      <li
+                        key={sublink.name}
+                        className="font-alex text-royal text-lg font-extrabold tracking-wide"
+                      >
                         <Link
                           to={sublink.path}
                           onClick={() => setIsOpen(false)}

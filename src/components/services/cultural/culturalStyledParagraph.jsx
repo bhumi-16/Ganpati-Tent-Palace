@@ -9,7 +9,7 @@ const TextSection = () => {
       <img
         src={leftFloral}
         alt="Left Floral"
-        className="absolute top-1/2 left-0 w-20 sm:w-32 lg:w-80 hidden lg:block -translate-y-1/2"
+        className="absolute top-1/2 left-0 w-[100px] sm:w-[250px] lg:w-[275px] hidden lg:block -translate-y-1/2"
         style={{
           filter:
             "sepia(0.6) saturate(4) hue-rotate(10deg) brightness(0.9) contrast(0.75)",
@@ -20,7 +20,7 @@ const TextSection = () => {
       <img
         src={rightFloral}
         alt="Right Floral"
-        className="absolute top-1/2 right-0 w-20 sm:w-32 lg:w-80 scale-x-[-1] hidden lg:block -translate-y-1/2"
+        className="absolute top-1/2 right-0 w-[100px] sm:w-[250px] lg:w-[275px] scale-x-[-1] hidden lg:block -translate-y-1/2"
         style={{
           filter:
             "sepia(0.6) saturate(4) hue-rotate(10deg) brightness(0.9) contrast(0.75)",

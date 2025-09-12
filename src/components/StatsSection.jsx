@@ -55,7 +55,7 @@ const StatsSection = () => {
       <img
         src={flower}
         alt="Flower Background"
-        className="absolute left-0 top-0 h-full w-1/2 object-cover opacity-15 pointer-events-none"
+        className="absolute left-0 top-0 h-full w-30 object-cover opacity-15 pointer-events-none"
         aria-hidden="true"
       />
 
